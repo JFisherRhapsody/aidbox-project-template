@@ -1,0 +1,7 @@
+metrics-config
+ {:zen/tags #{aidbox.config/metrics}
+  :port     #env-integer BOX_METRICS_PORT
+  :grafana {:url #env BOX_METRICS_GRAFANA_URL
+            :user #env BOX_METRICS_GRAFANA_USER
+            :password #env BOX_METRICS_GRAFANA_PASSWORD}
+  :postgres {:on #env BOX_METRICS_POSTGRES_ON}}
